@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_remove"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bt_exit"
+            android:layout_toEndOf="@+id/editText_remove"
+            android:text="제거" />
+
+        <Button
+            android:id="@+id/bt_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/bt_statistics"
+            android:text="이전" />
+
+        <EditText
+            android:id="@+id/editText_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText"
+            android:hint="지울 번호" />
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/bt_remove"
+            android:scrollbars="vertical"
+            android:text="좌표 저장될것" />
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bt_exit"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/bt_statistics"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map"
+            android:layout_toEndOf="@+id/editText_category"
+            android:text="통계" />
+
+        <EditText
+            android:id="@+id/editText_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bt_statistics"
+            android:layout_toEndOf="@+id/bt_remove"
+            android:hint="분류검색" />
+    </RelativeLayout>
+
+</LinearLayout>
